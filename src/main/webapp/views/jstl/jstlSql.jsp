@@ -3,11 +3,11 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="com.microsoft.sqlserver.jdbc.SQLServerDriver" %>
-<sql:setDataSource	var="connection"
+<sql:setDataSource	var="connection" scope="page"
 					driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
 					url="jdbc:sqlserver://admin.hypertech.com.vn:1433;databaseName=dev_db;"
 					user="dev" password="dev"></sql:setDataSource>
-<sql:query dataSource="connection" var="resultSet">SELECT * FROM STUDENTSCORE</sql:query>
+<sql:query dataSource="${connection}" var="resultSet" scope="page">SELECT * FROM STUDENTSCORE</sql:query>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +37,7 @@
 					</thead>
 					<tbody>
 						<c:set var="decimalFormat" value="<%=new DecimalFormat(\"00.00\")%>" scope="page"></c:set>
-						<c:forEach items="${rs.rows}" var="row" >
+						<c:forEach items="${resultSet.rows}" var="row" >
 							<tr>
 								<td>${row.id}</td>
 								<td>${row.account}</td>
