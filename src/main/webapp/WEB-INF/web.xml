@@ -6,34 +6,4 @@
 
 	<display-name>Archetype Created Web Application</display-name>
 
-	<servlet>
-		<servlet-name>PageDirectiveController</servlet-name>
-		<display-name>PageDirectiveController</display-name>
-		<description></description>
-		<servlet-class>io.cobra.javaweb.controllers.PageDirectiveController</servlet-class>
-		<init-param>
-			<param-name>db-driver</param-name>
-			<param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
-		</init-param>
-		<init-param>
-			<param-name>db-connection</param-name>
-			<param-value>jdbc:sqlserver://admin.hypertech.com.vn:1433;databaseName=dev_db;</param-value>
-		</init-param>
-		<init-param>
-			<param-name>db-username</param-name>
-			<param-value>dev</param-value>
-		</init-param>
-		<init-param>
-			<param-name>db-password</param-name>
-			<param-value>dev</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PageDirectiveController</servlet-name>
-		<url-pattern>/PageDirectiveController</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>PageDirectiveController</servlet-name>
-		<url-pattern>/page-directive</url-pattern>
-	</servlet-mapping>
 </web-app>
