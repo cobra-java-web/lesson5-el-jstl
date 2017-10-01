@@ -26,7 +26,13 @@
 							<li><a href="<c:url value="/views/el/sessionScope.jsp" />">EL - Session Scope Sample</a></li>
 						</ul>
 					</li>
-					<li><a href="<c:url value="/views/jstl/index.jsp" />">Java Standard Tag Library</a></li>
+					<li>
+						<a href="<c:url value="/views/jstl/index.jsp" />">Java Standard Tag Library</a>
+						<ul>
+							<li><a href="<c:url value="/views/jstl/jstlCore.jsp" />">JSTL - Core</a></li>
+							<li><a href="<c:url value="/views/jstl/jstlSql.jsp" />">JSTL - SQL</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
